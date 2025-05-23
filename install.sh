@@ -40,3 +40,6 @@ git clone https://github.com/DANdelion-0908/fastfetch.git ~/.config/fastfetch
 git clone https://github.com/DANdelion-0908/rofi.git ~/.config/rofi
 git clone git@github.com:DANdelion-0908/XD.git ~/Pictures/XD
 git clone git@github.com:DANdelion-0908/Scores.git ~/Documents/MuseScore4/Scores
+
+echo ""
+echo "Config files cloned and installed."
