@@ -31,6 +31,7 @@ echo "Installation complete."
 ### Cloning and installing config files from GitHub ###
 #######################################################
 
+echo ""
 echo "Cloning and installing config files from GitHub..."
 
 git clone https://github.com/DANdelion-0908/hypr.git ~/.config/hypr
