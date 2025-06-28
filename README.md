@@ -2,11 +2,12 @@
 
 Configuraciones personales para mi entorno en Linux, organizadas con symlinks usando [GNU Stow](https://www.gnu.org/software/stow/). Compatibles con [Hyprland](https://github.com/hyprwm/Hyprland), [Kitty](https://sw.kovidgoyal.net/kitty/), Bash, entre otros.
 
-# 📁 Estructura
+## 📁 Estructura
 
 Cada subdirectorio corresponde a un conjunto de configuraciones y puede instalarse de forma independiente con Stow:
 
 dotfiles
+
 ├── hypr/ → ~/.config/hypr/
 
 ├── kitty/ → ~/.config/kitty/
