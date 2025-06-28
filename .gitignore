@@ -1,0 +1,34 @@
+# Archivos de respaldo
+*~
+*.swp
+*.bak
+*.tmp
+
+# Archivos de caché o logs
+.cache/
+*.log
+
+# Archivos de entorno o secretos
+.env
+.env.*
+
+# Archivos generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Archivos relacionados con editores
+.vscode/
+.idea/
+*.code-workspace
+
+# Archivos del sistema
+*.lock
+*.pid
+
+# Archivos relacionados a Stow si los usaras
+.stow-local-ignore
+
+# Archivos o configuraciones personales
+ssh/
+gnupg/
+secrets/

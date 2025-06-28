@@ -1,0 +1,16 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+#window {
+  border-radius: 2ch;
+}
+
+entry {
+  placeholder: "So... What was I doing again?";
+  cursor: pointer;
+}
+
+element {
+  orientation: horizontal;
+  children: [ element-icon, element-text ];
+  spacing: 15px;
+}

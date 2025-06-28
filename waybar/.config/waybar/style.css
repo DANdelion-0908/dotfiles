@@ -1,0 +1,271 @@
+@import url('../../.cache/wal/colors-waybar.css');
+
+* {
+    font-size:15px;
+    font-weight: normal;
+    font-family: "FiraCode Nerd Font", monospace;
+}
+window#waybar{
+    all:unset;
+}
+.modules-left {
+    margin:0px 0px 0px 10px;
+    transition: all .3s ease;
+}
+.modules-center {
+    transition: all .3s ease;
+}
+.modules-right {
+    transition: all .3s ease;
+}
+tooltip {
+    color: white;
+    background-color: alpha(@color0, 1);
+    border-radius: 10px;
+}
+#clock:hover, #tray, #custom-pacman:hover, #custom-launcher:hover, #custom-notification:hover, #pulseaudio:hover, #bluetooth:hover, #network:hover, #backlight:hover, #battery:hover, #cpu:hover, #memory:hover, #temperature:hover{
+    transition: all .3s ease;
+    background-color: alpha(currentColor, 0.6);
+}
+#clock:hover{
+    transition: all .3s ease;
+    background-color: alpha(@color5, 0.5);
+}
+#custom-notification {
+    padding: 10px 15px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    transition: all .3s ease;
+    color:@color1;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+    
+}
+#clock{
+    padding: 10px 10px;
+    color:white;
+    border-radius: 10px;
+    transition: all .3s ease;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.6);
+}
+#custom-pacman{
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color:@color0;
+    background-color: alpha(@color7, 0.7);
+    border-radius: 10px;
+
+}
+#custom-launcher{
+    padding: 10px 10px;
+    background-color: alpha(@color0, 0.5);
+    font-size: 20px;
+    border-radius: 10px;
+    transition: all .3s ease;
+    color: white;
+    color:@color1;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+
+}
+#workspaces {
+    margin: 0px 10px 0px 10px;
+    background-color: alpha(@color0, 0.5);
+    padding: 10px 10px;
+    border-radius: 10px;
+    color:@color4;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+}
+#workspaces button {
+    all:unset;
+    padding: 0px 15px;
+    color: alpha(@color4, 0.7);
+    transition: all .2s ease;
+}
+#workspaces button:hover {
+    color: @color1;
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+}
+#workspaces button.active {
+    color: @color4;
+    border: none;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+#workspaces button.empty {
+    color: alpha(@color4, 0.7);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+}
+#workspaces button.empty:hover {
+    color: @color1;
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+}
+#workspaces button.empty.active {
+    color: @color4;
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+#pulseaudio{
+    padding: 10px 10px;
+    margin: 0px 0px 0px 10px;
+    transition: all .3s ease;
+    color: white;
+    background-color: alpha(@color0, 0.5); ;
+    border-radius: 10px;
+    color:@color3;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+}
+#bluetooth{
+    padding: 10px 10px;
+    margin-left: 10px;
+    transition: all .3s ease;
+    color:white;
+    background-color: alpha(@color0, 0.5);
+    border-radius: 10px;
+    color:@color2; 
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+
+}
+#network{
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all .3s ease;
+    color:@color1;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+
+}
+#battery{
+    padding: 10px 10px;
+    transition: all .3s ease;
+    border-radius: 10px;
+    color: white;
+    background-color: alpha(@color0, 0.5);
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+
+}
+#battery.charging {
+    color: #81b953;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffbe61;
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#group-expand{
+    padding: 0px 5px;
+    transition: all .3s ease;
+}
+#custom-expand{
+    margin: 0px 10px 0px 0px; 
+    padding: 0px 5px;
+    color:alpha(#FFFFFF,.5);
+    transition: all .3s ease; 
+}
+#custom-expand:hover{
+    color:rgba(255,255,255,.2);
+}
+#custom-colorpicker{
+    padding: 0px 5px;
+}
+#cpu,#memory,#temperature{
+    padding: 0px 10px;
+    transition: all .3s ease; 
+    margin: 0px 10px 0px 0px; 
+    color:@foreground;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: @color1;
+    border-radius: 0px;
+
+}
+#custom-endpoint{
+    color:transparent;
+    text-shadow: 0px 0px 1.5px @foreground;
+
+}
+#tray{
+    padding: 10px 15px;
+    transition: all .3s ease; 
+    background-color: alpha(@color0, 0.5);
+    border-radius: 10px;
+    color:@color5;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+    
+}
+#tray menu * {
+    padding: 10px 10px;
+    transition: all .3s ease;
+}
+
+#tray menu separator {
+    padding: 10px 10px;
+    transition: all .3s ease; 
+}
+#backlight{
+    padding: 10px 15px;
+    margin-left: 10px;
+    transition: all .3s ease; 
+    color:white;
+    background-color: alpha(@color0, 0.5);
+    border-radius: 10px;
+    color:@color4;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+}
+#window{
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: alpha(@color0, 0.5);
+    transition: all .3s ease;
+    color:@color3;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: alpha(@color0, 0.5);
+}
+window#waybar.empty #window {
+    border: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px;
+}
