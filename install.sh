@@ -27,20 +27,20 @@ done < packages.txt
 echo ""
 echo "Installation complete."
 
-#######################################################
-### Cloning and installing config files from GitHub ###
-#######################################################
+###############################
+### Setting config files up ###
+###############################
 
 echo ""
-echo "Cloning and installing config files from GitHub..."
 
-git clone https://github.com/DANdelion-0908/hypr.git ~/.config/hypr
-git clone https://github.com/DANdelion-0908/waybar.git ~/.config/waybar
-git clone https://github.com/DANdelion-0908/kitty.git ~/.config/kitty
-git clone https://github.com/DANdelion-0908/fastfetch.git ~/.config/fastfetch
-git clone https://github.com/DANdelion-0908/rofi.git ~/.config/rofi
-git clone git@github.com:DANdelion-0908/XD.git ~/Pictures/XD
-git clone git@github.com:DANdelion-0908/Scores.git ~/Documents/MuseScore4/Scores
+if ! command -v stow &> /dev/null; then
+    echo "Stow is not installed. Please install it first."
+    exit 1
+fi
+
+echo "Creating Symbolic Links (Symlinks) and setting everything up..."
+
+stow $(echo */)
 
 echo ""
-echo "Config files cloned and installed."
+echo "Config files setted up."

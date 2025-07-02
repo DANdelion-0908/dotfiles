@@ -27,3 +27,6 @@ cat ~/.cache/wal/sequences
 
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
+
+# Grub Update
+alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
