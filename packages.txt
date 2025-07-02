@@ -1,5 +1,6 @@
 acpi
 brightnessctl
+catpuccin-gtk-theme-mocha
 cava
 clipse
 discord
@@ -7,6 +8,7 @@ fastfetch
 firefox
 firewalld
 grim
+grub-customizer
 gvfs
 hyprcursor
 hypridle
@@ -24,12 +26,14 @@ npm
 nvidia
 nvidia-utils
 nwg-look
+papirus-icon-theme
 pavucontrol
 pamixer
 pipewire
 playerctl
 python
 python-pywal16
+python-pywalfox
 rofi-wayland
 rose-pine-hyprcursor
 slurp
