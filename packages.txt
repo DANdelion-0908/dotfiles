@@ -18,9 +18,6 @@ hyprpicker
 hyprpolkitagent
 kitty
 krabby-bin
-mpv
-mpvlock-git
-mpvpaper
 nodejs
 npm
 nvidia
