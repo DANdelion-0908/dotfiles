@@ -25,12 +25,9 @@ tooltip {
 }
 #clock:hover, #tray, #custom-pacman:hover, #custom-launcher:hover, #custom-notification:hover, #pulseaudio:hover, #bluetooth:hover, #network:hover, #backlight:hover, #battery:hover, #cpu:hover, #memory:hover, #temperature:hover{
     transition: all .3s ease;
-    background-color: alpha(currentColor, 0.6);
+    color: @color4;
 }
-#clock:hover{
-    transition: all .3s ease;
-    background-color: alpha(@color5, 0.5);
-}
+
 #custom-notification {
     padding: 10px 15px;
     margin: 0px 10px;
@@ -40,7 +37,7 @@ tooltip {
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
     
 }
 #clock{
@@ -51,7 +48,7 @@ tooltip {
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.6);
+    background-color: alpha(@color0, 1);
 }
 #custom-pacman{
     padding: 0px 5px;
@@ -72,19 +69,18 @@ tooltip {
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
 
 }
 #workspaces {
     margin: 0px 10px 0px 10px;
-    background-color: alpha(@color0, 0.5);
     padding: 10px 10px;
     border-radius: 10px;
     color:@color4;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
 }
 #workspaces button {
     all:unset;
@@ -124,26 +120,24 @@ tooltip {
     margin: 0px 0px 0px 10px;
     transition: all .3s ease;
     color: white;
-    background-color: alpha(@color0, 0.5); ;
+    background-color: alpha(@color0, 1); ;
     border-radius: 10px;
     color:@color3;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
 }
 #bluetooth{
     padding: 10px 10px;
     margin-left: 10px;
     transition: all .3s ease;
     color:white;
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
     border-radius: 10px;
     color:@color2; 
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
 
 }
 #network{
@@ -155,7 +149,7 @@ tooltip {
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
 
 }
 #battery{
@@ -163,11 +157,10 @@ tooltip {
     transition: all .3s ease;
     border-radius: 10px;
     color: white;
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
 
 }
 #battery.charging {
@@ -221,13 +214,12 @@ tooltip {
 #tray{
     padding: 10px 15px;
     transition: all .3s ease; 
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
     border-radius: 10px;
     color:@color5;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
     
 }
 #tray menu * {
@@ -244,25 +236,22 @@ tooltip {
     margin-left: 10px;
     transition: all .3s ease; 
     color:white;
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
     border-radius: 10px;
-    color:@color4;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
 }
 #window{
     padding: 10px 10px;
     border-radius: 10px;
     color: white;
-    background-color: alpha(@color0, 0.5);
+    background-color: alpha(@color0, 1);
     transition: all .3s ease;
     color:@color3;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: alpha(@color0, 0.5);
 }
 window#waybar.empty #window {
     border: none;
