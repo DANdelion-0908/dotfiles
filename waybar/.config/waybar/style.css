@@ -23,7 +23,7 @@ tooltip {
     background-color: alpha(@color0, 1);
     border-radius: 10px;
 }
-#clock:hover, #tray, #custom-pacman:hover, #custom-launcher:hover, #custom-notification:hover, #pulseaudio:hover, #bluetooth:hover, #network:hover, #backlight:hover, #battery:hover, #cpu:hover, #memory:hover, #temperature:hover{
+#clock:hover, #tray, #custom-pacman:hover, #custom-launcher:hover, #custom-notification:hover, #pulseaudio:hover, #bluetooth:hover, #network:hover, #backlight:hover, #battery:hover, #battery.charging:hover, #cpu:hover, #memory:hover, #temperature:hover{
     transition: all .3s ease;
     color: @color4;
 }
