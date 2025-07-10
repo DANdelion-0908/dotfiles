@@ -47,7 +47,7 @@ cd dotfiles
 2. Ejecuta el archivo `install.sh` para instalar todos los paquetes necesarios.
 
 >[!NOTE]
->Puedes ver los paquetes a instalar en el archivo `packages.txt`.
+>Puedes ver los paquetes a instalar y modificarlos en el archivo `packages.txt`.
 
 ```bash
 ./install.sh
@@ -55,15 +55,15 @@ cd dotfiles
 
 Luego aplica las configuraciones que quieras con:
 
+>[!WARNING]
+>Asegúrate de que los archivos de destino no existan antes de aplicar stow o bien haz respaldo.
+
 ```bash
 stow kitty
 stow waybar
 stow hypr
 ...
 ```
-
->[!WARNING]
->Asegúrate de que los archivos de destino no existan antes de aplicar stow o bien haz respaldo.
 
 📷 Capturas
 
