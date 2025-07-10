@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ########################################################################
-### Installing necessary packages from official repositories and AUR ###
+### Installing necessary packages from official repositories or AUR ###
 ########################################################################
 
 if [[ $UID -eq 0 ]]; then
@@ -27,20 +27,21 @@ done < packages.txt
 echo ""
 echo "Installation complete."
 
-###############################
-### Setting config files up ###
-###############################
+#####################################
+### Setting config files up (WIP) ###
+#####################################
 
-echo ""
+#echo ""
+#echo "Creating symlinks using stow..."
 
-if ! command -v stow &> /dev/null; then
-    echo "Stow is not installed. Please install it first."
-    exit 1
-fi
+#if ! command -v stow &> /dev/null; then
+    #echo "Stow is not installed. Please install it first."
+    #exit 1
+#fi
 
-echo "Creating Symbolic Links (Symlinks) and setting everything up..."
+#echo "Creating Symbolic Links (Symlinks) and setting everything up..."
 
-stow $(echo */)
+#stow $(echo */)
 
-echo ""
-echo "Config files setted up."
+#echo ""
+#echo "Config files setted up."
