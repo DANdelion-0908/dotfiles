@@ -53,7 +53,7 @@ cd dotfiles
 ./install.sh
 ```
 
-Luego aplica las configuraciones que quieras con:
+3. Aplica las configuraciones que quieras con:
 
 >[!WARNING]
 >Asegúrate de que los archivos de destino no existan antes de aplicar stow o bien haz respaldo.
