@@ -59,7 +59,7 @@
     },
     "label": {
       "max-lines": 1,
-      "text": " "
+      "text": "So much text..."
     },
     "mpris": {
       "image-size": 96,
@@ -76,16 +76,12 @@
           "command": "amixer set Master toggle"
         },
         {
-          "label": "",
-          "command": "amixer set Capture toggle"
-        },
-        {
           "label": " ",
-          "command": "nm-connection-editor"
+          "command": "kitty nmtui"
         },
         {
           "label": "󰂯",
-          "command": "blueman-manager"
+          "command": "kitty bluetoothctl"
         },
         {
           "label": "󰏘",
