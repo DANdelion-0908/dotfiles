@@ -8,8 +8,9 @@
 
     "custom/launcher": {
         "format": " ",
-        "on-click": "exec rofi -show drun"
+        "on-click": "exec rofi -show drun" 
     },
+
     "hyprland/workspaces": {
         "format": "{id} {icon}",
         "format-icons": {
@@ -22,6 +23,7 @@
             "*": [ 1,2,3,4,5 ]
         }
     },
+
     "hyprland/window": {
         "format": "{initialTitle}",
         "icon": true,
@@ -31,12 +33,14 @@
             "(.*) — Thunar":"Thunar"
         }
     },
+
     "custom/notification": {
         "tooltip": false,
         "format": "󰍡",
         "on-click": "swaync-client -t -sw",
         "escape": true
     },
+
     "clock": {
         "format": "󰥔 {:%I:%M %p | %d %b %Y}  ",
         "interval": 1,   
@@ -51,6 +55,7 @@
             "on-click": "shift_up"
         }
     },
+
     "pulseaudio": {
         "scroll-step": 5,
         "format": "{volume}% {icon}",
@@ -69,6 +74,7 @@
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5"
     },
+
     "backlight": {
         "device": "intel_backlight",   
         "format": "{percent}% {icon}",
@@ -78,6 +84,7 @@
         "on-click": "brightnessctl set 100%",  
         "on-click-right": "brightnessctl set 10%"
     },
+
     "network": {
         "format-wifi": "{essid}  ",
         "format-ethernet":" {essid}",
@@ -87,6 +94,7 @@
         "tooltip-format-ethernet": "{ifname}",
         "on-click": "kitty nmtui"
     },
+
     "bluetooth": {
         "format-on": "󰂯",
         "format-off": "BT-off",
@@ -98,7 +106,8 @@
         "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
         "on-click-right": "blueman-manager"
-    }, 
+    },
+
     "battery": {
         "interval":30,
         "states": {
@@ -119,6 +128,7 @@
         "󰁹"
         ]
     },
+
     "custom/pacman": {
         "format": "󰅢 {}",
         "interval": 30,   
@@ -128,14 +138,17 @@
         "signal": 8,
         "tooltip": false
     },
+
     "custom/expand": {
         "format": "",
         "tooltip": false
     },
+
     "custom/endpoint":{
         "format": "|",
         "tooltip": false
     },
+
     "group/expand": {
         "orientation": "horizontal",
         "drawer": {
@@ -145,6 +158,7 @@
         },
         "modules": ["custom/expand", "custom/colorpicker","cpu","memory","temperature","custom/endpoint"]
     },
+
     "custom/colorpicker": {
         "format": "{}",
         "return-type": "json",
@@ -153,21 +167,26 @@
         "on-click": "~/.config/waybar/scripts/colorpicker.sh",
         "signal": 1
     },
+
     "cpu": {
         "format": "󰻠 {usage}%",
         "tooltip": true
     },
+
     "memory": {
         "format": "  {percentage}%"
     },
+
     "temperature": {
         "critical-threshold": 80,
         "format": " {temperatureC}°C"
     },
+
     "tray": {
         "icon-size": 20,
         "spacing": 20
     },
+
     "cava": {
         "framerate": 30,
         "autosens": 1,
@@ -186,7 +205,7 @@
         "input_delay": 2,
         "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
         "actions": {
-                   "on-click-right": "mode"
-                   }
+            "on-click-right": "mode"
+        }
     }
 } 
