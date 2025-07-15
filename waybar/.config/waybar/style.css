@@ -8,7 +8,6 @@
     font-size:13px;
     font-weight: bold;
     border-radius: 10px;
-    transition: all .3s ease;
     font-family: "FiraCode Nerd Font", monospace;
 }
 
@@ -24,7 +23,9 @@ tooltip {
     margin: 5px;
     color: white;
     padding: 6px 10px;
-    background-color: @background
+    transition: all .2s ease;
+    background-color: @background;
+    border: currentColor 1.5px solid;
 }
 
 .modules-left {
@@ -55,10 +56,11 @@ window#waybar {
 
 #workspaces {
     color:@color4;
+    
 }
 
 #window {
-    color: white;
+    color: @color3;
 }
 
 #clock {
@@ -70,7 +72,7 @@ window#waybar {
 }
 
 #backlight {
-    color:white;
+    color:@color6;
 }
 
 #pulseaudio {
@@ -115,6 +117,7 @@ window#waybar {
 *********************************/
 
 window#waybar.empty #window {
+    border: transparent;
     background-color: transparent;
 }
 
@@ -124,36 +127,29 @@ window#waybar.empty #window {
 
 #workspaces button {
     all:unset;
-    color: alpha(@color4, 0.7);
-    transition: all .2s ease;
     padding: 0px 10px;
+    transition: all .1s ease;
+    color: alpha(@color4, 0.5);
 }
 
 #workspaces button:hover {
     color: @color1;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-    transition: all 1s ease;
 }
 
 #workspaces button.active {
     color: @color4;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
 }
 
 #workspaces button.empty {
-    color: alpha(@color4, 0.7);
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+    color: alpha(@color4, 0.5);
 }
 
 #workspaces button.empty:hover {
     color: @color1;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-    transition: all 1s ease;
 }
 
 #workspaces button.empty.active {
     color: @color4;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
 
 /*******************************
@@ -170,6 +166,8 @@ window#waybar.empty #window {
 #network:hover, 
 #backlight:hover, 
 #battery:hover, 
-#battery.charging:hover {
+#battery.charging:hover,
+#battery.critical:not(.charging):hover,
+#battery.critical:not(.charging):hover {
     color: @color4;
 }
