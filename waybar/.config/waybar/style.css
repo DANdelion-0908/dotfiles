@@ -5,7 +5,7 @@
 *****************/
 
 * {
-    font-size:13px;
+    font-size: 13px;
     font-weight: bold;
     border-radius: 10px;
     font-family: "FiraCode Nerd Font", monospace;
@@ -22,7 +22,7 @@ tooltip {
 .module {
     margin: 5px;
     color: white;
-    padding: 6px 10px;
+    padding: 3px 10px;
     transition: all .2s ease;
     background-color: @background;
     border: currentColor 1.5px solid;
