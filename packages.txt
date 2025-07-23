@@ -3,7 +3,6 @@ brightnessctl
 catpuccin-gtk-theme-mocha
 cava
 clipse
-coolercontrol
 discord
 fastfetch
 firefox
@@ -19,6 +18,7 @@ hyprpicker
 hyprpolkitagent
 kitty
 krabby-bin
+libappindicator-gtk3
 nodejs
 npm
 nvidia
