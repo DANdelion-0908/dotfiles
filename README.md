@@ -2,7 +2,7 @@
 
 Configuraciones personales para mi entorno en EndeavourOS + Hyprland, organizadas con symlinks usando [GNU Stow](https://www.gnu.org/software/stow/).
 
-## ✔ Compatibles con:
+## ✔ Compatibles con
 
 - [Hyprland](https://github.com/hyprwm/Hyprland)
 - [Kitty](https://sw.kovidgoyal.net/kitty/)
@@ -19,7 +19,7 @@ Configuraciones personales para mi entorno en EndeavourOS + Hyprland, organizada
 
 Cada subdirectorio corresponde a un conjunto de configuraciones y puede instalarse de forma independiente con Stow:
 
-```
+```bash
 dotfiles
 
 ├── hypr/ → ~/.config/hypr/
@@ -37,32 +37,39 @@ dotfiles
 
 1. Clona el repositorio:
 
-```bash
-git clone https://github.com/tu_usuario/dotfiles.git
-cd dotfiles
-```
-
+   ```bash
+   git clone https://github.com/tu_usuario/dotfiles.git
+   cd dotfiles
+   ```
 2. Ejecuta el archivo `install.sh` para instalar todos los paquetes necesarios.
 
->[!NOTE]
->Puedes ver los paquetes a instalar y modificarlos en el archivo `packages.txt`.
+   > [!NOTE]
+   > Puedes ver los paquetes a instalar y modificarlos en el archivo `packages.txt`.
+   >
 
-```bash
-./install.sh
-```
-
+   ```bash
+   ./install.sh
+   ```
 3. Aplica las configuraciones que quieras con:
 
->[!WARNING]
->Asegúrate de que los archivos de destino no existan antes de aplicar stow o bien haz respaldo.
+   > [!WARNING]
+   > Asegúrate de que los archivos de destino no existan antes de aplicar stow o bien haz respaldo.
+   >
 
-```bash
-stow kitty
-stow waybar
-stow hypr
-...
-```
+   ```bash
+   stow kitty
+   stow waybar
+   stow hypr
+   ...
+   ```
 
-📷 Capturas
+## Extensiones
+
+Además de los paquetes dentro del archivo `packages.txt`, recomiendo instalar las siguientes extensiones para aplicar las configuraciones de Wal en las aplicaciones compatibles:
+
+- Tu extensión preferida de Wal para Visual Studio Code.
+- [Pywalfox](https://github.com/Frewacom/pywalfox.git) para Firefox y Thunderbird.
+
+## 📷 Capturas
 
 Coming soon...
