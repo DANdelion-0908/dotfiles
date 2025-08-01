@@ -21,7 +21,8 @@ krabby-bin
 libappindicator-gtk3
 nodejs
 npm
-nvidia
+nvidia-lts
+nvidia-prime
 nvidia-utils
 nwg-look
 papirus-icon-theme
