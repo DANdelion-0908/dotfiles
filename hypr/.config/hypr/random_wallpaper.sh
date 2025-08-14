@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 WALLPAPER_DIR="$HOME/Imágenes/XD/Wallpapers"
 CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
