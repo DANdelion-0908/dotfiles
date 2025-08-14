@@ -48,3 +48,4 @@ uwsm
 visual-studio-code-bin
 wl-clipboard
 xdg-desktop-portal-hyprland
+zsh
