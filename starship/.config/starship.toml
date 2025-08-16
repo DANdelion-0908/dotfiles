@@ -3,7 +3,7 @@ $username\
 $directory\
 $character
 """
-right_format = """| $all"""
+right_format = """| $all """
 
 [directory]
 truncation_length = 2
