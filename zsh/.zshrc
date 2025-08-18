@@ -2,14 +2,28 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
 setopt autocd beep extendedglob nomatch notify
-bindkey -v
+
+# Zsh Mode 
+# -e = EMACS
+# -v = Vi
+bindkey -e
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/dandelion/.zshrc'
 
 autoload -Uz compinit
 compinit
+
+# Zsh Bindkeys
+bindkey '^[[H'  beginning-of-line  # Tecla Inicio (Home)
+bindkey '^[[F'  end-of-line        # Tecla Fin (End)
+
+# Zsh config
+autoload -U compinit; compinit
+setopt correct_all
 
 # krabby
 krabby random
