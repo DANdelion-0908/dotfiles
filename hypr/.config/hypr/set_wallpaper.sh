@@ -1,3 +1,6 @@
+# Initialize hyprpaper
+exec hyprpaper &
+
 WALLPAPER=$(cat "$HOME/.cache/wal/wal")
 
 echo "$WALLPAPER"
