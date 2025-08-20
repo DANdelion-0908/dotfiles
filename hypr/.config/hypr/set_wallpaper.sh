@@ -8,3 +8,6 @@ echo "$WALLPAPER"
 # Apply the selected wallpaper
 wal -i "$WALLPAPER"
 hyprctl hyprpaper reload ,"$WALLPAPER"
+
+# Apply cursor
+hyprctl setcursor Qogir-dark 24
