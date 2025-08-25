@@ -4,4 +4,4 @@ if uwsm check may-start; then
     exec uwsm start hyprland-uwsm.desktop
 fi
 
-hyprctl hyprpaper reload ,"$(cat ~/.cache/wal/wal)"
+exec $HOME/.config/hypr/set_wallpaper.sh
