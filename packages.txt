@@ -1,6 +1,7 @@
 acpi
+bluez
+bluez-utils
 brightnessctl
-catpuccin-gtk-theme-mocha
 cava
 clipse
 discord
@@ -9,7 +10,6 @@ firefox
 firewalld
 gnome-keyring
 grim
-grub-customizer
 gvfs
 hyprcursor
 hypridle
@@ -20,6 +20,7 @@ hyprpolkitagent
 kitty
 krabby-bin
 libappindicator-gtk3
+networkmanager
 nodejs
 npm
 nvidia-lts
@@ -31,6 +32,7 @@ pavucontrol
 pamixer
 pipewire
 playerctl
+pulseaudio
 python
 python-pywal16
 python-pywalfox
@@ -45,7 +47,6 @@ thunar
 thunderbird
 ttf-firacode-nerd
 tumbler
-uwsm
 visual-studio-code-bin
 wl-clipboard
 xdg-desktop-portal-hyprland
