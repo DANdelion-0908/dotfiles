@@ -43,6 +43,7 @@ starship
 steam
 stow
 swaync
+themix-full-git
 thunar
 thunderbird
 ttf-firacode-nerd
