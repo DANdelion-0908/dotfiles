@@ -1,4 +1,4 @@
-WALLPAPER_DIR="$HOME/Imágenes/XD/Wallpapers"
+WALLPAPER_DIR="$HOME/Pictures/XD/Wallpapers"
 CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
 # Get a random wallpaper that is not the current one
