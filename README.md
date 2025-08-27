@@ -1,6 +1,6 @@
 # 🛠️ Dotfiles (WIP)
 
-Configuraciones personales para mi entorno en EndeavourOS + Hyprland, organizadas con symlinks usando [GNU Stow](https://www.gnu.org/software/stow/).
+Configuraciones personales para mi entorno en EndeavourOS/Arch + Hyprland, organizadas con symlinks usando [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## ✔ Compatibles con
 
