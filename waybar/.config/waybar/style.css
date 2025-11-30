@@ -42,7 +42,7 @@ tooltip {
 
 window#waybar {
     all:unset;
-    background-color: alpha(@background, 0.4);
+    background-color: alpha(@background, 0);
 }
 
 /************************************************
