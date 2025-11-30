@@ -7,7 +7,7 @@
 * {
     font-size: 13px;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 0px;
     font-family: "FiraCode Nerd Font", monospace;
 }
 
@@ -22,10 +22,10 @@ tooltip {
 .module {
     margin: 5px;
     color: white;
-    padding: 2px 10px;
+    padding: 1px 10px;
     transition: all .2s ease;
-    background-color: @background;
-    border: currentColor 1.5px solid;
+    background-color: alpha(@background, 0);
+    border-bottom: currentColor 1.5px solid;
 }
 
 .modules-left {
@@ -42,7 +42,7 @@ tooltip {
 
 window#waybar {
     all:unset;
-    background-color: alpha(@background, 0);
+    background-color: alpha(@background, 0.4);
 }
 
 /************************************************
@@ -50,25 +50,25 @@ window#waybar {
 *************************************************/
 
 #custom-launcher {
-    color:@color1;
+    color:@color3;
     font-size: 20px;
 }
 
 #workspaces {
-    color:@color4;
+    color:@color3;
     
 }
 
 #window {
-    color: @color3;
+    color:@color3;
 }
 
 #clock {
-    color:white;
+    color:@foreground;
 }
 
 #tray {
-    color:@color5;
+    color:@color3;
 }
 
 #backlight {
@@ -76,24 +76,24 @@ window#waybar {
 }
 
 #pulseaudio {
-    color:@color3;
+    color:@color4;
 }
 
 #bluetooth {
-    color:@color2; 
+    color:@color6; 
 }
 
 #network {
-    color:@color1;
+    color:@color5;
 
 }
 
 #battery {
-    color: white;
+    color: @color4;
 }
 
 #custom-notification {
-    color:@color1;
+    color:@color7;
 }
 
 /*********************************
@@ -169,5 +169,5 @@ window#waybar.empty #window {
 #battery.charging:hover,
 #battery.critical:not(.charging):hover,
 #battery.critical:not(.charging):hover {
-    color: @color4;
+    color: @accent;
 }
