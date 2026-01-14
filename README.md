@@ -76,6 +76,7 @@ Coming soon...
 ## To-Do
 
 - [ ] Mejorar script de instalación para ejecutar stow automáticamente.
-- [ ] Configurar Zsh.
-- [ ] Agregar swww.
+- [x] Configurar Zsh.
+- [ ] Implementar swww.
+- [ ] Implementar Quickshell.
 - [ ] ...
