@@ -48,10 +48,10 @@ style_root = "bold white"
 format = '[ $user ]($style)'
 
 [directory.substitutions]
-"Documentos" = "󰈙 "
-"Descargas" = " "
-"Música" = "󰝚 "
-"Imágenes" = " "
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
 
 [nodejs]
 symbol = ""
