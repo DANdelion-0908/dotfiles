@@ -61,6 +61,7 @@ thunderbird
 ttf-firacode-nerd
 tumbler
 visual-studio-code-bin
+waybar
 wl-clipboard
 xdg-desktop-portal-hyprland
 zsh
