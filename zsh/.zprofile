@@ -1,5 +1,3 @@
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-
-hyprland
+start-hyprland
 
 exec $HOME/.config/hypr/set_wallpaper.sh
