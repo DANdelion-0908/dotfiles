@@ -62,13 +62,6 @@ dotfiles
    ...
    ```
 
-## Extensiones
-
-Además de los paquetes dentro del archivo `packages.txt`, recomiendo instalar las siguientes extensiones para aplicar las configuraciones de Wal en las aplicaciones compatibles:
-
-- Tu extensión preferida de Wal para Visual Studio Code.
-- [Pywalfox](https://github.com/Frewacom/pywalfox.git) para Firefox y Thunderbird.
-
 ## 📷 Capturas
 
 Coming soon...
