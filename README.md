@@ -2,7 +2,7 @@
 
 Configuraciones personales para mi entorno en EndeavourOS/Arch + Hyprland, organizadas con symlinks usando [GNU Stow](https://www.gnu.org/software/stow/).
 
-## ✔ Compatibles con
+## ✔ Algunos paquetes que implementa mi configuración:
 
 - [Hyprland](https://github.com/hyprwm/Hyprland)
 - [Kitty](https://sw.kovidgoyal.net/kitty/)
