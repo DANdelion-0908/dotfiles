@@ -36,7 +36,3 @@ alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 # Clear Screen
 alias cls='clear'
-
-. "$HOME/.local/bin/env"
-
-
