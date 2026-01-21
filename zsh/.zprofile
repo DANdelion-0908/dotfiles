@@ -1,3 +1,2 @@
-start-hyprland
+#! /bin/zsh
 
-exec $HOME/.config/hypr/set_wallpaper.sh

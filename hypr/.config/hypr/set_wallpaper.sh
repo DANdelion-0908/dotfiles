@@ -1,5 +1,9 @@
+#! /bin/zsh
+
+sleep 1
+
 # Initialize hyprpaper
-exec hyprpaper &
+hyprpaper &
 
 WALLPAPER=$(cat "$HOME/.cache/wal/wal")
 
