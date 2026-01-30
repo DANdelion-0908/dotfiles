@@ -31,7 +31,9 @@
         "icon-size": 20,
         "rewrite": {
             "(.*) - Discord":"Discord",
-            "(.*) — Thunar":"Thunar"
+            "(.*) - Thunar":"Thunar",
+            "(.*) - Helium": "Helium",
+            "(.*) - Firefox":"Firefox"
         }
     },
 
