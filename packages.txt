@@ -46,11 +46,13 @@ pavucontrol
 pamixer
 pipewire
 playerctl
+plymouth
 pulseaudio
 python
 python-pywal16
 rofi-wayland
 rose-pine-hyprcursor
+sddm
 slurp
 starship
 steam
