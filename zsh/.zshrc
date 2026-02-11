@@ -41,3 +41,6 @@ alias cls='clear'
 
 # Shut down
 alias zzz='hyprshutdown -t "Shutting down..." --post-cmd "shutdown -P 0"'
+
+# Reboot
+alias rrr='hyprshutdown -t "Rebooting..." --post-cmd "reboot"'
