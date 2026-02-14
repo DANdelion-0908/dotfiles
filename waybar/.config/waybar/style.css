@@ -5,7 +5,7 @@
 *****************/
 
 * {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     border-radius: 0px;
     font-family: "FiraCode Nerd Font", monospace;
@@ -22,18 +22,20 @@ tooltip {
 .module {
     margin: 5px;
     color: white;
+    border-radius: 10px;
     padding: 1px 10px;
     transition: all .2s ease;
-    background-color: alpha(@background, 0);
-    border-bottom: currentColor 1.5px solid;
+    background-color: alpha(@background, 1.0);
+    /* border-bottom: currentColor 1.5px solid; */
 }
 
 .modules-left {
-    margin-left: 10px;
+    margin-left: 5px;
+    
 }
 
 .modules-right {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 /*******************************************
@@ -42,7 +44,7 @@ tooltip {
 
 window#waybar {
     all:unset;
-    background-color: alpha(@background, 0.7);
+    background-color: alpha(@background, 0.3);
 }
 
 /************************************************
@@ -80,7 +82,7 @@ window#waybar {
 }
 
 #bluetooth {
-    color:@color6; 
+    color:@color3; 
 }
 
 #network {
@@ -89,7 +91,7 @@ window#waybar {
 }
 
 #battery {
-    color: @color4;
+    color: @color3;
 }
 
 #custom-notification {
