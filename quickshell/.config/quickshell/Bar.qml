@@ -2,7 +2,7 @@ import Quickshell
 
 Scope {
     Variants {
-        model: Quickshell.screens;
+        model: Quickshell.screens
 
         PanelWindow {
             required property var modelData
