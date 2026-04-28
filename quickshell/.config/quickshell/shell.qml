@@ -50,5 +50,14 @@ PanelWindow {
         Item {
             Layout.fillWidth: true
         }
+
+        ClockWidget {
+            anchors.centerIn: parent
+            color: root.colFg
+            font {
+                pixelSize: root.fontSize
+                family: root.fontFamily
+            }
+        }
     }
 }

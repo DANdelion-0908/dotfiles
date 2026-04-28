@@ -1,7 +1,6 @@
-@import "~/.cache/wal/colors-rofi-light.rasi"
-
 #window {
   border-radius: 2ch;
+
 }
 
 entry {
@@ -13,4 +12,17 @@ element {
   orientation: horizontal;
   children: [ element-icon, element-text ];
   spacing: 15px;
+}
+
+configuration {
+    font: "firacode nerd font";
+    modi: "drun,run,filebrowser";
+    show-icons: true;
+    display-drun: "Apps";
+    display-run: "Run";
+    display-filebrowser: "Files";
+    drun-display-format: "{name}";
+    hover-select: true;
+    me-select-entry: "MouseSecondary";
+    me-accept-entry: "MousePrimary";
 }
