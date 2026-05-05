@@ -7,7 +7,7 @@ SAVEHIST=1000
 
 setopt autocd beep extendedglob nomatch notify
 
-# Zsh Mode 
+# Zsh Mode
 # -e = EMACS
 # -v = Vi
 bindkey -e
@@ -44,3 +44,6 @@ alias zzz='hyprshutdown -t "Shutting down..." --post-cmd "shutdown -P 0"'
 
 # Reboot
 alias rrr='hyprshutdown -t "Rebooting..." --post-cmd "reboot"'
+
+# Sleep
+alias slp="systemctl suspend"
