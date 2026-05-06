@@ -15,10 +15,11 @@ Scope {
     property int fontSize: 14
 
     Variants {
-        model: Quickshell.screens;
-
+        model: Quickshell.screens
 
         PanelWindow {
+            color: bar.colBg
+
             anchors {
                 top: true
                 left: true
@@ -26,12 +27,6 @@ Scope {
             }
 
             implicitHeight: 30
-
-            Rectangle {
-                anchors.fill: parent
-                color: bar.colBg
-                radius: 6
-            }
 
             Workspaces {
                 anchors.left: parent.left
