@@ -18,7 +18,7 @@ Scope {
         model: Quickshell.screens
 
         PanelWindow {
-            color: bar.colBg
+            color: "transparent"
 
             anchors {
                 top: true
@@ -28,15 +28,36 @@ Scope {
 
             implicitHeight: 30
 
-            Workspaces {
-                anchors.left: parent.left
-            }
+            RowLayout {
+                anchors.fill: parent
+                spacing: 300
 
-            ClockWidget {
-                anchors.centerIn: parent
-                color: bar.colFg
-                font.family: bar.fontFamily
-                font.pixelSize: bar.fontSize
+                Rectangle {
+                    color: bar.colBg
+
+                    implicitWidth: 120
+                    implicitHeight: 30
+
+                    radius: 50
+
+                    Workspaces {
+                        anchors.left: parent.left
+                    }
+                }
+
+                Rectangle {
+                    color: bar.colBg
+                    implicitWidth: 250
+                    implicitHeight: 30
+                    radius: 50
+
+                    ClockWidget {
+                        anchors.centerIn: parent
+                        color: bar.colFg
+                        font.family: bar.fontFamily
+                        font.pixelSize: bar.fontSize
+                    }
+                }
             }
         }
     }
