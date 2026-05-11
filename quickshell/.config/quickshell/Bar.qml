@@ -19,6 +19,7 @@ Scope {
 
         PanelWindow {
             color: "transparent"
+            implicitHeight: 30
 
             anchors {
                 top: true
@@ -26,16 +27,21 @@ Scope {
                 right: true
             }
 
-            implicitHeight: 30
+            margins {
+                top: 10
+                left: 10
+                right: 10
+                bottom: 0
+            }
 
             RowLayout {
                 anchors.fill: parent
-                spacing: 300
+                spacing: 510
 
                 Rectangle {
                     color: bar.colBg
 
-                    implicitWidth: 120
+                    implicitWidth: 315
                     implicitHeight: 30
 
                     radius: 50
@@ -56,6 +62,21 @@ Scope {
                         color: bar.colFg
                         font.family: bar.fontFamily
                         font.pixelSize: bar.fontSize
+                    }
+                }
+
+                Rectangle {
+                    color: bar.colBg
+                    implicitWidth: 315
+                    implicitHeight: 30
+                    radius: 50
+
+                    Tray {
+                        anchors {
+                            left: parent.left
+                            top: parent.top
+                            bottom: parent.bottom
+                        }
                     }
                 }
             }

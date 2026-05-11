@@ -21,7 +21,7 @@ Item {
                 text: index + 1
                 color: isActive ? bar.colCyan : (workspaces ? bar.colBlue : bar.colMuted)
 
-                leftPadding: 10
+                leftPadding: index == 0 ? 5 : 60
 
                 font {
                     pixelSize: bar.fontSize
