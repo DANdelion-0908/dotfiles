@@ -36,13 +36,13 @@ Scope {
 
             RowLayout {
                 anchors.fill: parent
-                spacing: 0
+                spacing: 20
 
                 Rectangle {
                     color: bar.colBg
 
-                    implicitWidth: 315
-                    implicitHeight: 30
+                    Layout.preferredWidth: 240
+                    Layout.preferredHeight: 30
 
                     radius: 50
 
@@ -51,10 +51,14 @@ Scope {
                     }
                 }
 
+                Item {
+                    Layout.fillWidth: true
+                }
+
                 Rectangle {
                     color: bar.colBg
-                    implicitWidth: 250
-                    implicitHeight: 30
+                    Layout.preferredWidth: 250
+                    Layout.preferredHeight: 30
                     radius: 50
 
                     ClockWidget {
@@ -65,25 +69,25 @@ Scope {
                     }
                 }
 
+                Item {
+                    Layout.fillWidth: true
+                }
+
                 Rectangle {
                     color: bar.colBg
-                    implicitWidth: 100
-                    implicitHeight: 30
+                    Layout.preferredWidth: 100
+                    Layout.preferredHeight: 30
                     radius: 50
 
                     Tray {
-                        anchors {
-                            left: parent.left
-                            top: parent.top
-                            bottom: parent.bottom
-                        }
+                        anchors.centerIn: parent
                     }
                 }
 
                 Rectangle {
                     color: bar.colBg
-                    implicitWidth: 100
-                    implicitHeight: 30
+                    Layout.preferredWidth: 100
+                    Layout.preferredHeight: 30
                     radius: 50
 
                     Power {

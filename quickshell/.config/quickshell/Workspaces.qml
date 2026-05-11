@@ -9,30 +9,55 @@ Item {
     id: workspaces
 
     Row {
-        anchors.fill: parent
-        anchors.margins: 8
+        spacing: 10
 
         Repeater {
             model: 5
 
-            Text {
-                property var workspaces: Hyprland.workspaces.values.find(w => w.id === index + 1)
+            Rectangle {
+                id: workspaceButton
                 property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
-                text: index + 1
-                color: isActive ? bar.colCyan : (workspaces ? bar.colBlue : bar.colMuted)
 
-                leftPadding: index == 0 ? 5 : 60
+                width: 40
+                height: 30
+                radius: 50
 
-                font {
-                    pixelSize: bar.fontSize
-                    bold: true
+                color: isActive ? bar.colCyan : "transparent"
+
+                border.color: bar.colBg
+                border.width: 2
+
+                Text {
+                    anchors.centerIn: parent
+                    text: index + 1
+
+                    color: isActive ? bar.colBg : bar.colFg
+
+                    font {
+                        pixelSize: bar.fontSize
+                        bold: true
+                        family: bar.fontFamily
+                    }
+
                 }
 
                 MouseArea {
                     anchors.fill: parent
+                    hoverEnabled: true
+
                     onClicked: Hyprland.dispatch("workspace " + (index + 1))
+
+                    //onEntered: workspaceButton.color = bar.colCyan
+                    //onExited: workspaceButton.color = isActive ? bar.colCyan : "transparent"
+                }
+
+                Behavior on color {
+                    ColorAnimation {
+                        duration: 100
+                    }
                 }
             }
+
         }
     }
 }
