@@ -44,14 +44,14 @@ Scope {
                 }
 
                 Rectangle {
-                    color: Theme.secondary
+                    color: Theme.primary
                     Layout.preferredWidth: 280
                     Layout.preferredHeight: 30
                     radius: 50
 
                     ClockWidget {
                         anchors.centerIn: parent
-                        color: Theme.bg
+                        color: Theme.fg
                         font.family: Theme.fontFamily
                         font.pixelSize: Theme.fontSize
                     }
@@ -62,7 +62,7 @@ Scope {
                 }
 
                 Rectangle {
-                    color: Theme.bg
+                    color: Theme.muted
                     Layout.preferredWidth: 100
                     Layout.preferredHeight: 30
                     radius: 50
@@ -73,7 +73,7 @@ Scope {
                 }
 
                 Rectangle {
-                    color: Theme.primary
+                    color: Theme.secondary
                     Layout.preferredWidth: 100
                     Layout.preferredHeight: 30
                     radius: 50
