@@ -1,19 +1,9 @@
-import Quickshell
 import QtQuick
+import Quickshell
 import QtQuick.Layouts
+import "."
 
 Scope {
-    id: bar
-
-    property color colBg: "#1a1b26"
-    property color colFg: "#a9b1d6"
-    property color colMuted: "#444b6a"
-    property color colCyan: "#0db9d7"
-    property color colBlue: "#7aa2f7"
-    property color colYellow: "#e0af68"
-    property string fontFamily: "JetBrainsMono Nerd Font"
-    property int fontSize: 14
-
     Variants {
         model: Quickshell.screens
 
@@ -39,7 +29,7 @@ Scope {
                 spacing: 20
 
                 Rectangle {
-                    color: bar.colBg
+                    color: Theme.bg
 
                     Layout.preferredWidth: 240
                     Layout.preferredHeight: 30
@@ -56,16 +46,16 @@ Scope {
                 }
 
                 Rectangle {
-                    color: bar.colBg
-                    Layout.preferredWidth: 250
+                    color: Theme.secondary
+                    Layout.preferredWidth: 280
                     Layout.preferredHeight: 30
                     radius: 50
 
                     ClockWidget {
                         anchors.centerIn: parent
-                        color: bar.colFg
-                        font.family: bar.fontFamily
-                        font.pixelSize: bar.fontSize
+                        color: Theme.bg
+                        font.family: Theme.fontFamily
+                        font.pixelSize: Theme.fontSize
                     }
                 }
 
@@ -74,7 +64,7 @@ Scope {
                 }
 
                 Rectangle {
-                    color: bar.colBg
+                    color: Theme.bg
                     Layout.preferredWidth: 100
                     Layout.preferredHeight: 30
                     radius: 50
@@ -85,7 +75,7 @@ Scope {
                 }
 
                 Rectangle {
-                    color: bar.colBg
+                    color: Theme.primary
                     Layout.preferredWidth: 100
                     Layout.preferredHeight: 30
                     radius: 50

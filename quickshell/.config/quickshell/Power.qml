@@ -11,8 +11,8 @@ Item {
 
         Text {
             text: UPower.displayDevice.percentage * 100 + "%"
-            color: bar.colFg
-            font: bar.fontFamily
+            color: Theme.bg
+            font: Theme.fontFamily
         }
     }
 }

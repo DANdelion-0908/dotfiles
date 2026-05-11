@@ -22,21 +22,21 @@ Item {
                 height: 30
                 radius: 50
 
-                color: isActive ? bar.colCyan : "transparent"
+                color: isActive ? Theme.primary : "transparent"
 
-                border.color: bar.colBg
+                border.color: Theme.bg
                 border.width: 2
 
                 Text {
                     anchors.centerIn: parent
                     text: index + 1
 
-                    color: isActive ? bar.colBg : bar.colFg
+                    color: isActive ? Theme.bg : Theme.fg
 
                     font {
-                        pixelSize: bar.fontSize
+                        pixelSize: Theme.fontSize
                         bold: true
-                        family: bar.fontFamily
+                        family: Theme.fontFamily
                     }
 
                 }
@@ -47,8 +47,8 @@ Item {
 
                     onClicked: Hyprland.dispatch("workspace " + (index + 1))
 
-                    //onEntered: workspaceButton.color = bar.colCyan
-                    //onExited: workspaceButton.color = isActive ? bar.colCyan : "transparent"
+                    //onEntered: workspaceButton.color = Theme.colCyan
+                    //onExited: workspaceButton.color = isActive ? Theme.colCyan : "transparent"
                 }
 
                 Behavior on color {
