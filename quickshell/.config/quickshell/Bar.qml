@@ -36,7 +36,7 @@ Scope {
 
             RowLayout {
                 anchors.fill: parent
-                spacing: 510
+                spacing: 0
 
                 Rectangle {
                     color: bar.colBg
@@ -67,7 +67,7 @@ Scope {
 
                 Rectangle {
                     color: bar.colBg
-                    implicitWidth: 315
+                    implicitWidth: 100
                     implicitHeight: 30
                     radius: 50
 
@@ -77,6 +77,17 @@ Scope {
                             top: parent.top
                             bottom: parent.bottom
                         }
+                    }
+                }
+
+                Rectangle {
+                    color: bar.colBg
+                    implicitWidth: 100
+                    implicitHeight: 30
+                    radius: 50
+
+                    Power {
+                        anchors.centerIn: parent
                     }
                 }
             }
