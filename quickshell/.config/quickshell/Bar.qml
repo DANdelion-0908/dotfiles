@@ -8,8 +8,8 @@ Scope {
         model: Quickshell.screens
 
         PanelWindow {
-            color: "transparent"
-            implicitHeight: 30
+            color: Theme.blurBg
+            implicitHeight: 40
 
             anchors {
                 top: true
@@ -17,15 +17,13 @@ Scope {
                 right: true
             }
 
-            margins {
-                top: 10
-                left: 10
-                right: 10
-                bottom: 0
-            }
-
             RowLayout {
-                anchors.fill: parent
+                anchors {
+                    fill: parent
+
+                    leftMargin: 10
+                    rightMargin: 10
+                }
                 spacing: 20
 
                 Rectangle {

@@ -3,6 +3,7 @@ pragma Singleton
 import QtQuick
 
 QtObject {
+    readonly property color blurBg: "#55353a10"
     readonly property color bg: "#55353a"
     readonly property color fg: "#eddbd9"
 
