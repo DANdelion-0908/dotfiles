@@ -4,15 +4,15 @@ import QtQuick
 
 QtObject {
     readonly property color blurBg: "#55353a10"
-    readonly property color bg: "#55353a"
-    readonly property color fg: "#eddbd9"
+    readonly property color bg: "#050507"
+    readonly property color fg: "#2f3239"
 
     readonly property color muted: "#444b6a"
 
-    readonly property color primary: "#fe7773"
-    readonly property color secondary: "#01bfa6"
-    readonly property color tertiary: "#f9b76d"
-    readonly property color accent: "#ffc838"
+    readonly property color primary: "#36d5e0"
+    readonly property color secondary: "#65799a"
+    readonly property color tertiary: "#b89a65"
+    readonly property color accent: "#f713e4"
 
     readonly property string fontFamily: "JetBrainsMono Nerd Font"
     readonly property int fontSize: 14

@@ -8,7 +8,7 @@ Scope {
         model: Quickshell.screens
 
         PanelWindow {
-            color: Theme.blurBg
+            color: "transparent"
             implicitHeight: 40
 
             anchors {
@@ -62,7 +62,7 @@ Scope {
                 }
 
                 Rectangle {
-                    color: Theme.muted
+                    color: Theme.bg
                     Layout.preferredWidth: 100
                     Layout.preferredHeight: 30
                     radius: 50
@@ -73,7 +73,7 @@ Scope {
                 }
 
                 Rectangle {
-                    color: Theme.secondary
+                    color: Theme.tertiary
                     Layout.preferredWidth: 100
                     Layout.preferredHeight: 30
                     radius: 50
