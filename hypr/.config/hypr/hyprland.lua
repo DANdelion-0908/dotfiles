@@ -163,16 +163,16 @@ hl.config({
             size = 10,
             passes = 3,
             ignore_opacity = true,
-            xray = true,
+            xray = false,
             noise = 0.0117,
             contrast = 1,
             brightness = 2.0,
             vibrancy = 1.0,
             vibrancy_darkness = 0.0,
             special = true,
-            popups = true,
+            popups = false,
             popups_ignorealpha = 0.2,
-            input_methods = true,
+            input_methods = false,
             input_methods_ignorealpha = 0.2
         },
 
@@ -401,7 +401,8 @@ hl.window_rule({
 hl.window_rule({
     name = "thunderbird_workspace",
     match = { class = "org.mozilla.Thunderbird" },
-    workspace = 5
+    workspace = 5,
+    no_initial_focus = true
 })
 
 -- Picture-in-Picture
