@@ -59,7 +59,7 @@ local editor = "zeditor"
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Expanding-functionality/#events
 
 -- Startup
-hl.on("hyprland.start", function ()
+hl.on("hyprland.start", function()
     -- My Apps
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("discord --start-minimized & steam -silent")
@@ -77,7 +77,7 @@ hl.on("hyprland.start", function ()
 end)
 
 -- Shutdown
-hl.on("hyprland.shutdown", function ()
+hl.on("hyprland.shutdown", function()
     hl.exec_cmd("hyprshutdown")
 end)
 
@@ -209,7 +209,7 @@ hl.config({
 -- Bezier Syntax -> hl.curve( NAME, { type = "spring", mass = MASS, stiffness = STIFF, dampening = DAMP })
 
 -- Bezier Curves
-hl.curve( "rubber", { type = "spring", mass = 1, stiffness = 70, dampening = 10 } )
+hl.curve("rubber", { type = "spring", mass = 1, stiffness = 70, dampening = 10 })
 
 -- Animations
 hl.animation({ leaf = "windows", enabled = true, speed = 1, spring = "rubber", style = "slide" })
@@ -271,6 +271,10 @@ hl.config({
         scroll_button = 0,
 
         follow_mouse = 1,
+
+        touchpad = {
+            natural_scroll = true,
+        }
     }
 })
 
@@ -286,7 +290,8 @@ hl.bind("SUPER + D", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + Q", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + Z", hl.dsp.exec_cmd("hyprpicker -a"))
-hl.bind("Print", hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
+hl.bind("Print",
+    hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
 hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd('swaync-client -t -sw'))
 hl.bind("SUPER + V", hl.dsp.exec_cmd('kitty --class clipse -e clipse'))
 
@@ -410,7 +415,7 @@ hl.window_rule({
     name = "picture_in_picture",
     match = { title = "Picture-in-Picture" },
     float = true,
-    size = {"cursor_x-(window_w*0.5))", "(cursor_y-(window_h*0.5))"},
+    size = { "cursor_x-(window_w*0.5))", "(cursor_y-(window_h*0.5))" },
     pin = true,
     no_initial_focus = true
 })
