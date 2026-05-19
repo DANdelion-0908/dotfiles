@@ -70,5 +70,6 @@ Coming soon...
 
 - [x] Configurar Zsh.
 - [ ] Mejorar script de instalación para ejecutar stow automáticamente.
-- [ ] Implementar Quickshell.
+- [ ] Implementar Quickshell (In progress).
+- [ ] Traducir todas las configuraciones a Lua.
 - [ ] ...
