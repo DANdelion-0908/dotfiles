@@ -10,7 +10,7 @@ Item {
         spacing: 5
 
         Text {
-            text: UPower.displayDevice.percentage * 100 + "%"
+            text: Math.round(UPower.displayDevice.percentage * 100) + "%"
             color: Theme.bg
             font: Theme.fontFamily
         }
