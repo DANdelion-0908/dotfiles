@@ -2,6 +2,7 @@ import QtQuick
 import Quickshell
 import QtQuick.Layouts
 import Quickshell.Services.UPower
+import Quickshell.Services.SystemTray
 import "."
 
 Scope {
@@ -10,6 +11,8 @@ Scope {
 
         delegate: Component {
             PanelWindow {
+                id: barWindow
+
                 color: "transparent"
                 implicitHeight: 40
 
@@ -69,6 +72,8 @@ Scope {
                         implicitWidth: tray.implicitWidth + 20
                         implicitHeight: tray.implicitHeight + 10
                         radius: 50
+
+                        visible: true
 
                         Tray {
                             id: tray
