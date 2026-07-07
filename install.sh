@@ -9,8 +9,8 @@ if [[ $UID -eq 0 ]]; then
     exit 1
 fi
 
-if ! command -v paru &> /dev/null; then
-    echo "Paru is not installed. Please install it first."
+if ! command -v yay &> /dev/null; then
+    echo "yay is not installed. Please install it first."
     exit 1
 fi
 
@@ -20,7 +20,7 @@ while IFS= read -r pkg; do
         sudo pacman -S --needed --noconfirm "$pkg"
     else
         echo "$pkg not found in official repos. Trying AUR..."
-        paru -S --needed --noconfirm "$pkg"
+        yay -S --needed --noconfirm "$pkg"
     fi
 done < packages.txt
 

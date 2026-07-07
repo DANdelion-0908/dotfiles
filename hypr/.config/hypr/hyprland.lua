@@ -47,7 +47,7 @@ hl.monitor({
 -- Syntax -> local (optional but recommended) keyword = value
 
 local terminal = "kitty"
-local fileManager = "nautilus"
+local fileManager = "dolphin"
 local menu = "rofi -show drun"
 local browser = "zen-browser"
 local editor = "zeditor"
