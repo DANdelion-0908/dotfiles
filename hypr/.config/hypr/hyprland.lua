@@ -50,7 +50,7 @@ local terminal = "kitty"
 local fileManager = "dolphin"
 local menu = "rofi -show drun"
 local browser = "zen-browser"
-local editor = "zeditor"
+local editor = "code"
 
 -----------------
 --- AUTOSTART ---
@@ -296,7 +296,7 @@ hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd('swaync-client -t -sw'))
 hl.bind("SUPER + V", hl.dsp.exec_cmd('kitty --class clipse -e clipse'))
 
 -- Open config file
-hl.bind("SUPER + I", hl.dsp.exec_cmd("zeditor $HOME/dotfiles/"))
+hl.bind("SUPER + I", hl.dsp.exec_cmd("code $HOME/dotfiles/"))
 
 -- Swap Windows
 hl.bind("SUPER + SHIFT + RIGHT", hl.dsp.window.swap({ direction = "right" }))
