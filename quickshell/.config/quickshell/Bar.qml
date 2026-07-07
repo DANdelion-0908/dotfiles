@@ -93,6 +93,11 @@ Scope {
                             anchors.centerIn: parent
                         }
                     }
+
+                    Volume {
+                        id: volume
+                        anchors.centerIn: parent
+                    }
                 }
             }
         }
