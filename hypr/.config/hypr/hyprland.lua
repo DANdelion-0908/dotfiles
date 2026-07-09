@@ -48,9 +48,11 @@ hl.monitor({
 
 local terminal = "kitty"
 local fileManager = "dolphin"
-local menu = "rofi -show drun"
+local menu = "$HOME/.config/rofi/launchers/type-4/launcher.sh"
 local browser = "zen-browser"
 local editor = "code"
+
+local ipc = "noctalia msg"
 
 -----------------
 --- AUTOSTART ---
@@ -66,10 +68,9 @@ hl.on("hyprland.start", function()
 
     -- System Apps and Sercvices
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-    hl.exec_cmd("swaync")
     hl.exec_cmd("hyprctl setcursor Qogir-Dark 24")
     hl.exec_cmd("hypridle")
-    hl.exec_cmd("quickshell")
+    hl.exec_cmd("noctalia")
     hl.exec_cmd("systemctl --user enable hyprpolkitagent")
     hl.exec_cmd("clipse -listen")
     hl.exec_cmd("thunderbird")
@@ -138,7 +139,7 @@ hl.config({
         border_size = 3,
 
         gaps_in = 5,
-        gaps_out = 11,
+        gaps_out = 10,
 
         col = {
             active_border = { colors = { "rgba(2ECCD0aa)", "rgba(F811E4aa)" }, angle = 90 },
@@ -167,7 +168,7 @@ hl.config({
             noise = 0.0117,
             contrast = 1,
             brightness = 2.0,
-            vibrancy = 1.0,
+            vibrancy = 0.1696,
             vibrancy_darkness = 0.0,
             special = true,
             popups = false,
@@ -286,13 +287,13 @@ hl.config({
 
 -- Apps binds
 hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))
-hl.bind("SUPER + D", hl.dsp.exec_cmd(menu))
+hl.bind("SUPER + D", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher"))
 hl.bind("SUPER + Q", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + Z", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind("Print",
     hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
-hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd('swaync-client -t -sw'))
+hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd(ipc .. " panel-toggle control-center"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd('kitty --class clipse -e clipse'))
 
 -- Open config file
@@ -375,6 +376,16 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
 
+------------------
+--- Workspaces ---
+------------------
+
+hl.workspace_rule({ workspace = "1", monitor = "eDP-1", persistent = true })
+hl.workspace_rule({ workspace = "2", monitor = "eDP-1", persistent = true })
+hl.workspace_rule({ workspace = "3", monitor = "eDP-1", persistent = true })
+hl.workspace_rule({ workspace = "4", monitor = "eDP-1", persistent = true })
+hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true })
+
 --------------------
 --- WINDOW RULES ---
 --------------------
@@ -420,6 +431,13 @@ hl.window_rule({
     no_initial_focus = true
 })
 
+-- Noctalia rules
+hl.window_rule({
+    match = {  class = "dev.noctalia.Noctalia" },
+    float = true,
+    size = { 1080, 920 },
+})
+
 -------------------
 --- LAYER RULES ---
 -------------------
@@ -427,9 +445,14 @@ hl.window_rule({
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/#layer-rules
 
 hl.layer_rule({
-    name = "blur quickshell",
-    match = { namespace = "quickshell" },
-    blur = false
+  name = "noctalia",
+  match = {
+    namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd)$",
+  },
+  no_anim = true,
+  ignore_alpha = 0.5,
+  blur = true,
+  blur_popups = true,
 })
 
 hl.layer_rule({
