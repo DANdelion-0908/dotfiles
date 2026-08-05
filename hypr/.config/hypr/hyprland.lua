@@ -211,9 +211,12 @@ hl.config({
 
 -- Bezier Curves
 hl.curve("rubber", { type = "spring", mass = 1, stiffness = 70, dampening = 10 })
+hl.curve("cubic", { type = "bezier", points = { { 0.65, 0 }, { 0.35, 1 } } })
+hl.curve( "overshoot", { type = "bezier", points = { {0.5, 0.9}, {0.1, 1.1} } } )
 
 -- Animations
-hl.animation({ leaf = "windows", enabled = true, speed = 1, spring = "rubber", style = "slide" })
+hl.animation({  leaf = "windows", enabled = true, speed = 4, bezier = "overshoot", style = "popin" })
+hl.animation({  leaf = "workspaces", enabled = true, speed = 4, bezier = "overshoot", style = "slide" })
 
 ---------------
 --- Layouts ---
@@ -433,9 +436,25 @@ hl.window_rule({
 
 -- Noctalia rules
 hl.window_rule({
+    name = "noctalia",
     match = {  class = "dev.noctalia.Noctalia" },
     float = true,
     size = { 1080, 920 },
+})
+
+hl.window_rule({
+    name = "Godot DEBUG window",
+    match = { title = ".* .(DEBUG.)" },
+    float = true,
+    fullscreen = false,
+})
+
+hl.window_rule({
+    name = "Discord Popout window",
+    match = { title = "Discord Popout" },
+    float = true,
+    pin = true,
+    no_initial_focus = true
 })
 
 -------------------
