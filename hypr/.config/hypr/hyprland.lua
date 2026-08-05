@@ -49,7 +49,7 @@ hl.monitor({
 local terminal = "kitty"
 local fileManager = "dolphin"
 local menu = "$HOME/.config/rofi/launchers/type-4/launcher.sh"
-local browser = "zen-browser"
+local browser = "chromium"
 local editor = "code"
 
 local ipc = "noctalia msg"
@@ -209,14 +209,12 @@ hl.config({
 -- Animation Syntax -> hl.animation({ leaf = STRING, enabled = BOOLEAN, speed = FLOAT, curve = STRING[, style = STRING] })
 -- Bezier Syntax -> hl.curve( NAME, { type = "spring", mass = MASS, stiffness = STIFF, dampening = DAMP })
 
+
 -- Bezier Curves
-hl.curve("rubber", { type = "spring", mass = 1, stiffness = 70, dampening = 10 })
-hl.curve("cubic", { type = "bezier", points = { { 0.65, 0 }, { 0.35, 1 } } })
-hl.curve( "overshoot", { type = "bezier", points = { {0.5, 0.9}, {0.1, 1.1} } } )
+hl.curve("rubber", { type = "spring", mass = 1, stiffness = 160, dampening = 20 })
 
 -- Animations
-hl.animation({  leaf = "windows", enabled = true, speed = 4, bezier = "overshoot", style = "popin" })
-hl.animation({  leaf = "workspaces", enabled = true, speed = 4, bezier = "overshoot", style = "slide" })
+hl.animation({ leaf = "windows", enabled = true, speed = 1, spring = "rubber", style = "slide" })
 
 ---------------
 --- Layouts ---
@@ -383,11 +381,11 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
 --- Workspaces ---
 ------------------
 
-hl.workspace_rule({ workspace = "1", monitor = "eDP-1", persistent = true })
-hl.workspace_rule({ workspace = "2", monitor = "eDP-1", persistent = true })
-hl.workspace_rule({ workspace = "3", monitor = "eDP-1", persistent = true })
-hl.workspace_rule({ workspace = "4", monitor = "eDP-1", persistent = true })
-hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true })
+hl.workspace_rule({ workspace = "1", persistent = true })
+hl.workspace_rule({ workspace = "2", persistent = true })
+hl.workspace_rule({ workspace = "3", persistent = true })
+hl.workspace_rule({ workspace = "4", persistent = true })
+hl.workspace_rule({ workspace = "5", persistent = true })
 
 --------------------
 --- WINDOW RULES ---

@@ -24,3 +24,6 @@ alias rrr='hyprshutdown -t "Rebooting..." --post-cmd "reboot"'
 
 # Sleep
 alias slp="systemctl suspend"
+
+# Remove orphaned packages
+alias cleanBS='sudo pacman -Rns $(pacman -Qtdq)'
