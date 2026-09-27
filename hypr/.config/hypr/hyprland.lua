@@ -49,7 +49,7 @@ hl.monitor({
 local terminal = "kitty"
 local fileManager = "dolphin"
 local menu = "$HOME/.config/rofi/launchers/type-4/launcher.sh"
-local browser = "chromium"
+local browser = "zen-browser"
 local editor = "code"
 
 local ipc = "noctalia msg"
@@ -63,15 +63,15 @@ local ipc = "noctalia msg"
 -- Startup
 hl.on("hyprland.start", function()
     -- My Apps
-    hl.exec_cmd("hyprpaper")
     hl.exec_cmd("discord --start-minimized & steam -silent")
+    hl.exec_cmd("openrgb --startminimized -p RAINBOW")
 
     -- System Apps and Sercvices
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("hyprctl setcursor Qogir-Dark 24")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("noctalia")
-    hl.exec_cmd("systemctl --user enable hyprpolkitagent")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("clipse -listen")
     hl.exec_cmd("thunderbird")
     hl.exec_cmd("source $HOME/.config/hypr/env-vars.sh")
@@ -220,39 +220,39 @@ hl.animation({ leaf = "windows", enabled = true, speed = 1, spring = "rubber", s
 --- Layouts ---
 ---------------
 
--- dwindle
-hl.config({
-    dwindle = {
-        force_split = 0,
-        preserve_split = true,
-        smart_split = true,
-        smart_resizing = true,
-        permanent_direction_override = false,
-        special_scale_factor = 1,
-        use_active_for_splits = true,
-        default_split_ratio = 1.0,
-        split_bias = 1,
-        precise_mouse_move = true
-    }
-})
+-- -- dwindle
+-- hl.config({
+--     dwindle = {
+--         force_split = 0,
+--         preserve_split = true,
+--         smart_split = true,
+--         smart_resizing = true,
+--         permanent_direction_override = false,
+--         special_scale_factor = 1,
+--         use_active_for_splits = true,
+--         default_split_ratio = 1.0,
+--         split_bias = 1,
+--         precise_mouse_move = true
+--     }
+-- })
 
--- Master
-hl.config({
-    master = {
-        allow_small_split = true,
-        special_scale_factor = 1,
-        mfact = 0.3,
-        new_status = "master",
-        new_on_top = true,
-        new_on_active = "after",
-        orientation = "left",
-        slave_count_for_center_master = 2,
-        center_master_fallback = "left",
-        smart_resizing = true,
-        drop_at_cursor = true,
-        always_keep_position = false
-    }
-})
+-- -- Master
+-- hl.config({
+--     master = {
+--         allow_small_split = true,
+--         special_scale_factor = 1,
+--         mfact = 0.3,
+--         new_status = "master",
+--         new_on_top = true,
+--         new_on_active = "after",
+--         orientation = "left",
+--         slave_count_for_center_master = 2,
+--         center_master_fallback = "left",
+--         smart_resizing = true,
+--         drop_at_cursor = true,
+--         always_keep_position = false
+--     }
+-- })
 
 -------------
 --- INPUT ---
@@ -455,6 +455,23 @@ hl.window_rule({
     no_initial_focus = true
 })
 
+local suppressMaximizeRule = hl.window_rule({
+    -- Ignore maximize requests from all apps. You'll probably like this.
+    name  = "suppress-maximize-events",
+    match = { class = ".*" },
+
+    suppress_event = "maximize",
+})
+
+-- Hyprland-run windowrule
+hl.window_rule({
+    name  = "move-hyprland-run",
+    match = { class = "hyprland-run" },
+
+    move  = "20 monitor_h-120",
+    float = true,
+})
+
 -------------------
 --- LAYER RULES ---
 -------------------
@@ -470,12 +487,6 @@ hl.layer_rule({
   ignore_alpha = 0.5,
   blur = true,
   blur_popups = true,
-})
-
-hl.layer_rule({
-    name = "blur swaync (to remove)",
-    match = { namespace = "swaync-control-center" },
-    blur = false
 })
 
 hl.layer_rule({
