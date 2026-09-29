@@ -11,19 +11,19 @@ krabby random
 eval "$(starship init zsh)"
 
 # Grub Update
-alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 # Clear Screen
-alias cls="clear"
+alias cls='clear'
 
 # Shut down
-alias zzz="hyprshutdown -t "Shutting down..." --post-cmd "shutdown -P 0""
+alias zzz='hyprshutdown -t "Shutting down..." --post-cmd "shutdown -P 0"'
 
 # Reboot
-alias rrr="hyprshutdown -t "Rebooting..." --post-cmd "reboot""
+alias rrr='hyprshutdown -t "Rebooting..." --post-cmd "reboot"'
 
 # Sleep
 alias slp="systemctl suspend"
 
 # Remove orphaned packages
-alias cleanBS="sudo pacman -Rns $(pacman -Qtdq)"
+alias cleanBS='sudo pacman -Rns $(pacman -Qtdq)'
